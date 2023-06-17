@@ -8,14 +8,14 @@
 
 body {
   font-family: 'Poppins';
-  background-color: #00d1d1;
-  color: #103442;
+  background-color: #90e0ef;
+  color: #282640;
 }
 
 .container {
   width: 500px;
-  height: 100vh;
-  height: 100dvh;
+  height: 80vh;
+  height: 80dvh;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -25,21 +25,68 @@ body {
   flex-wrap: wrap;
 }
 
+.saved {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.saved-top {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+  color: #282640;
+  margin: auto;
+}
+
+.saved-data {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.saved-border {
+  border-radius: 15px;
+  padding: 10px 15px;
+  width: fit-content;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.25s ease-in-out;
+  background-color: #ffffff53;
+}
+
+.saved-border:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 2px 20px 2px #2826401b;
+}
+
 .container p,
 h3 {
   margin-bottom: 5px;
 }
 
 .data {
-  border: 2px solid #103442;
   width: 500px;
   border-radius: 15px;
   padding: 10px 15px;
+  transition: all 0.25s ease-in-out;
+  background-color: #ffffff53;
+}
+
+.data:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 2px 20px 2px #2826401b;
 }
 
 .btn {
   border: none;
-  padding: 5px 10px;
+  padding: 5px 10px 7px;
   margin: 5px;
   border-radius: 15px;
   transition: all 0.25s ease-in-out;
@@ -50,37 +97,39 @@ h3 {
 }
 
 .btn-primary {
-  background-color: #103442;
-  color: #f7fbef;
+  background-color: #f7fbef;
+  color: #282640;
 }
 
 .btn-primary:hover {
-  box-shadow: 0px 0px 0px 2px #f7fbef;
+  box-shadow: 0px 0px 0px 2px #282640;
 }
 
 .btn-secondary {
-  background-color: #f7fbef;
-  color: #103442;
+  background-color: #282640;
+  color: #f7fbef;
 }
 
 .btn-secondary:hover {
-  box-shadow: 0px 0px 0px 2px #103442;
+  box-shadow: 0px 0px 0px 2px #f7fbef;
 }
 
-@media (width<625px) {
-  .container {
-    width: 400px;
-  }
+.nav {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  height: 10dvh;
 }
 
-@media (width<425px) {
-  .container {
-    width: 280px;
-  }
+.nav-item {
+  margin: 10px;
+  font-size: 1.25rem;
+  transition: all 0.25s ease-in-out;
 }
 
-@media (width<300px) {
-  .container {
-    width: 200px;
-  }
+.nav-item:hover {
+  transform: scale(1.15);
 }
