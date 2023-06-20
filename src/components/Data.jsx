@@ -1,7 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import CtaButtons from './CtaButtons';
-const URL = 'http://www.boredapi.com/api/activity/';
+import Footer from './Footer';
+const URL = 'https://www.boredapi.com/api/activity/';
 
 const Data = () => {
   const fetchActivity = () => {
@@ -40,7 +41,7 @@ const Data = () => {
         {isLoading || isFetching ? (
           <h3>Fetchin you a new Activity😉...</h3>
         ) : !!activity?.data?.error || error ? (
-          <h2>Error: {activity?.data?.error || error.message}🙁</h2>
+          <h2>Error: {activity?.data?.error || error.code}🙁</h2>
         ) : (
           <>
             <h3 style={{ textTransform: 'uppercase', verticalAlign: 'middle' }}>
@@ -83,6 +84,7 @@ const Data = () => {
           saveActivity={() => saveActivity(activity)}
         />
       </div>
+      <Footer />
     </>
   );
 };

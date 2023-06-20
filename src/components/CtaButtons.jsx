@@ -1,3 +1,5 @@
+import { Tooltip } from 'react-tooltip';
+
 const Buttons = ({ refetch, saveActivity }) => {
   return (
     <>
@@ -12,9 +14,14 @@ const Buttons = ({ refetch, saveActivity }) => {
         className="btn btn-secondary"
         onClick={saveActivity}
         style={{ verticalAlign: 'middle' }}
+        data-tooltip-id="my-tooltip"
+        data-tooltip-place="top"
+        data-tooltip-content="Saved"
+        data-tooltip-delay-hide={1000}
       >
         🕔 Save for Later
       </button>
+      <Tooltip id="my-tooltip" openOnClick="true" />
     </>
   );
 };

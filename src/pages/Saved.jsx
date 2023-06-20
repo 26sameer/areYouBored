@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Footer from '../components/Footer';
 
 const Saved = () => {
   var activityList = JSON.parse(localStorage.getItem('activityList') || '[]');
@@ -29,7 +30,7 @@ const Saved = () => {
           act.map(activity => {
             return (
               <div key={activity?.key} className="saved-border">
-                <p style={{ textTransform: 'capitalize', width: '400px' }}>
+                <p style={{ textTransform: 'capitalize' }}>
                   <strong>
                     <span>➡ </span>Activity:{' '}
                   </strong>
@@ -47,6 +48,7 @@ const Saved = () => {
           })
         )}
       </div>
+      <Footer />
     </div>
   );
 };
