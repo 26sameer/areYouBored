@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
+:root {
+  --bg: #90e0ef;
+  --primary: #282640;
+  --secondary: #f7fbef;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +14,8 @@
 
 body {
   font-family: 'Poppins';
-  background-color: #90e0ef;
-  color: #282640;
+  background-color: var(--bg);
+  color: var(--primary);
 }
 
 .container {
@@ -35,7 +41,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #282640;
+  color: var(--primary);
   margin: 0 auto 10px;
 }
 
@@ -99,21 +105,21 @@ h3 {
 }
 
 .btn-primary {
-  background-color: #f7fbef;
-  color: #282640;
+  background-color: var(--secondary);
+  color: var(--primary);
 }
 
 .btn-primary:hover {
-  box-shadow: 0px 0px 0px 2px #282640;
+  box-shadow: 0px 0px 0px 2px var(--primary);
 }
 
 .btn-secondary {
-  background-color: #282640;
-  color: #f7fbef;
+  background-color: var(--primary);
+  color: var(--secondary);
 }
 
 .btn-secondary:hover {
-  box-shadow: 0px 0px 0px 2px #f7fbef;
+  box-shadow: 0px 0px 0px 2px var(--secondary);
 }
 
 .nav {
