@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import CtaButtons from './CtaButtons';
 import Footer from './Footer';
-const URL = 'https://www.boredapi.com/api/activity/';
+const URL = 'https://bored-api.appbrewery.com/random';
 
 const Data = () => {
   const fetchActivity = () => {
